@@ -1,0 +1,108 @@
+/* Komponen: kartu, tombol, tabel, gambar, dan form */
+
+/* Kartu / bagian */
+section {
+    background: var(--color-surface);
+    padding: var(--card-pad);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-1);
+}
+
+/* Judul */
+h1 {
+    color: var(--color-primary);
+    font-size: var(--text-3xl);
+}
+
+h2 {
+    color: var(--color-primary);
+    font-size: var(--text-xl);
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--space-4);
+}
+
+caption {
+    margin-bottom: var(--space-2);
+    font-weight: bold;
+    text-align: left;
+}
+
+th,
+td {
+    padding: var(--space-2);
+    border: 1px solid var(--color-border);
+    text-align: left;
+}
+
+th {
+    background: var(--color-primary);
+    color: var(--color-surface);
+}
+
+/* Gambar */
+figure {
+    margin: var(--space-4) 0;
+}
+
+figure img {
+    width: 100%;
+    max-width: 640px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-1);
+}
+
+figcaption {
+    margin-top: var(--space-2);
+    font-size: var(--text-sm);
+}
+
+/* Form */
+form {
+    display: grid;
+    gap: var(--space-3);
+}
+
+form p {
+    margin: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: var(--space-1);
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: var(--space-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+/* Tombol */
+button {
+    padding: var(--space-2) var(--space-4);
+    border: 0;
+    border-radius: var(--radius-md);
+    background: var(--color-primary);
+    color: var(--color-surface);
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Fokus keyboard */
+a:focus,
+input:focus,
+button:focus {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 2px;
+}
