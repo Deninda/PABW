@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksi Mobil Saya</title>
+
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="komponen.css">
+    <link rel="stylesheet" href="tema.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- BARIS PERTAMA -->
+        <header>
+            <div class="header-baris">
+
+                <h1>Koleksi Mobil Saya</h1>
+
+                <nav class="navbar" aria-label="Navigasi utama">
+                    <ul>
+                        <li>
+                            <a href="#koleksi-mobil">Koleksi Mobil</a>
+                        </li>
+                        <li>
+                            <a href="#tambah-mobil">Tambah Mobil</a>
+                        </li>
+                        <li>
+                            <a href="#tentang-saya">Tentang Saya</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <input
+                type="checkbox"
+                id="tema"
+                class="pengalih-tema"
+            >
+
+            <label for="tema" class="tombol-tema">
+                Tema gelap
+            </label>
+
+            <p>
+                Halaman ini berisi koleksi mobil saya,
+                lengkap dengan merek, tahun, dan jenis mobil.
+            </p>
+        </header>
+
+
+        <!-- BARIS KEDUA -->
+        <div class="isi">
+
+            <!-- SIDEBAR -->
+            <aside class="sisi">
+
+                <h2>Menu</h2>
+
+                <nav aria-label="Menu samping">
+                    <ul>
+                        <li>
+                            <a href="#koleksi-mobil">
+                                Koleksi Mobil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#tambah-mobil">
+                                Tambah Mobil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#tentang-saya">
+                                Tentang Saya
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </aside>
+
+
+            <!-- KONTEN UTAMA -->
+            <main class="utama">
+
+                <section id="koleksi-mobil">
+
+                    <h2>Koleksi Mobil</h2>
+
+                    <p>
+                        Berikut adalah beberapa mobil yang menjadi
+                        koleksi saya.
+                    </p>
+
+                    <div class="katalog">
+
+                            <article class="kartu">
+                                <h3>Lancer evo 9</h3>
+                                <p><strong>Merek:</strong> Mitsubishi</p>
+                                <p><strong>Tahun:</strong> 2005</p>
+                                <p><strong>Jenis:</strong> Sedan Sport</p>
+                            </article>
+
+                            <article class="kartu">
+                                <h3>BMW M3 GTR</h3>
+                                <p><strong>Merek:</strong> BMW</p>
+                                <p><strong>Tahun:</strong> 2000</p>
+                                <p><strong>Jenis:</strong> Sport</p>
+                            </article>
+
+                            <article class="kartu">
+                                <h3>GTR R34</h3>
+                                <p><strong>Merek:</strong> Nissan</p>
+                                <p><strong>Tahun:</strong> 2002</p>
+                                <p><strong>Jenis:</strong> Sport</p>
+                            </article>
+
+                        </div>
+                        
+                        <div class="galeri"></div>
+                        <figure>
+                            <img
+                                src="mobil1.webp"
+                                alt="Mobil koleksi saya"
+                                width="640"
+                                height="360"
+                                loading="lazy"
+                            >
+
+                            <figcaption>
+                                Lancer Evo 9
+                            </figcaption>
+                        </figure>
+
+
+                        <figure>
+                            <img
+                                src="mobil2.webp"
+                                alt="Mobil kedua dalam koleksi saya"
+                                width="640"
+                                height="360"
+                                loading="lazy"
+                            >
+
+                            <figcaption>
+                                BMW M3 GTR
+                            </figcaption>
+                        </figure>
+
+
+                        <figure>
+                            <img
+                                src="mobil3.webp"
+                                alt="Mobil ketiga dalam koleksi saya"
+                                width="640"
+                                height="360"
+                                loading="lazy"
+                            >
+
+                            <figcaption>
+                                GTR R34
+                            </figcaption>
+                        </figure>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <section id="tambah-mobil">
+
+                    <h2>Tambah Mobil</h2>
+
+                    <p>
+                        Masukkan informasi mobil yang ingin
+                        ditambahkan ke koleksi.
+                    </p>
+
+                    <form action="/simpan" method="post">
+
+                        <p>
+                            <label for="nama-mobil">
+                                Nama Mobil
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nama-mobil"
+                                name="nama-mobil"
+                                required
+                            >
+                        </p>
+
+
+                        <p>
+                            <label for="merek">
+                                Merek Mobil
+                            </label>
+
+                            <input
+                                type="text"
+                                id="merek"
+                                name="merek"
+                                required
+                            >
+                        </p>
+
+
+                        <p>
+                            <label for="tahun">
+                                Tahun Mobil
+                            </label>
+
+                            <input
+                                type="number"
+                                id="tahun"
+                                name="tahun"
+                                min="1950"
+                                max="2026"
+                                required
+                            >
+                        </p>
+
+
+                        <p>
+                            <label for="jenis">
+                                Jenis Mobil
+                            </label>
+
+                            <input
+                                type="text"
+                                id="jenis"
+                                name="jenis"
+                                required
+                            >
+                        </p>
+
+
+                        <button type="submit">
+                            Simpan Mobil
+                        </button>
+
+                    </form>
+
+                </section>
+
+
+                <section id="tentang-saya">
+
+                    <h2>Tentang Saya</h2>
+
+                    <p>
+                        Saya adalah mahasiswa yang memiliki mobil
+                        mobil yang ada di daftar koleksi saya AAMIIN.
+                    </p>
+
+                </section>
+
+            </main>
+
+        </div>
+
+
+        <!-- BARIS KETIGA -->
+        <footer>
+
+            <p>
+                Nama: Deninda Afizzano | NIM: 25523116
+            </p>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>

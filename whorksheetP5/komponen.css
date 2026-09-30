@@ -1,0 +1,188 @@
+/* E.1 — Tampilan dasar kolom isian */
+
+.form-kolom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-fg);
+}
+
+button {
+  font: inherit;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: var(--color-surface);
+  cursor: pointer;
+}
+
+/* E.2 — Keadaan fokus */
+
+/* :focus-visible hanya muncul saat pengguna memakai papan ketik */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* E.3 — Keadaan tidak sah */
+
+/* SALAH — form langsung merah ketika halaman dibuka */
+/*
+input:invalid {
+  border-color: var(--color-danger);
+}
+*/
+
+/* BENAR — hanya setelah pengguna mengisi sesuatu yang tidak sah */
+input:user-invalid {
+  border-color: var(--color-danger);
+  border-width: 2px;
+}
+
+/* Pesan galat: sembunyikan selama belum tidak-sah,
+   tampilkan saat diperlukan */
+.pesan-galat {
+  display: none;
+  color: var(--color-danger);
+  font-size: var(--text-sm);
+}
+
+.form-kolom:has(input:user-invalid) .pesan-galat {
+  display: block;
+}
+
+/* Gambar koleksi mobil */
+figure {
+  margin: var(--space-4) 0;
+  padding: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+figcaption {
+  padding: var(--space-2) var(--space-3);
+  font-weight: 600;
+  color: var(--color-fg);
+}
+
+.kartu {
+    display: flex;
+    flex-direction: column;
+
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-1);
+
+    padding: var(--card-pad);
+
+    min-width: 0;
+    align-content: start;
+    min-height: 14rem;
+}
+
+.katalog {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(16rem, 1fr)
+    );
+    gap: var(--space-4);
+}
+
+.katalog .kartu:first-child {
+    grid-column: span 2;
+}
+
+/* Isi kartu */
+
+.kartu__isi {
+    min-width: 0;
+}
+
+
+/* Judul kartu */
+
+.kartu__judul {
+    overflow-wrap: anywhere;
+}
+
+
+/* Bagian bawah kartu */
+
+.kartu__kaki {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+}
+
+
+/* ==============================
+   GALERI ADAPTIF
+   ============================== */
+
+.galeri {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(16rem, 1fr));
+
+    gap: var(--space-4);
+}
+
+
+/* ==============================
+   FIGURE DI DALAM GALERI
+   ============================== */
+
+.galeri figure {
+    margin: 0;
+}
+
+
+/* ==============================
+   PERBAIKAN ISI PANJANG
+   ============================== */
+
+.galeri img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ==============================
+   KARTU DENGAN TINGGI MINIMUM
+   ============================== */
+
+.galeri .kartu {
+    display: grid;
+    align-content: start;
+    min-height: 14rem;
+}
