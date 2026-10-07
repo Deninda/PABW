@@ -1,0 +1,153 @@
+/* E.1 — Tampilan dasar kolom isian */
+
+.form-kolom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-kolom p {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-kolom button {
+  align-self: flex-start;
+}
+
+.pesan-status {
+  color: var(--color-primary);
+  font-size: var(--text-sm);
+}
+
+label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-fg);
+}
+
+button {
+  font: inherit;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  cursor: pointer;
+}
+
+/* E.2 — Keadaan fokus */
+
+/* :focus-visible hanya muncul saat pengguna memakai papan ketik */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* E.3 — Keadaan tidak sah */
+
+/* SALAH — form langsung merah ketika halaman dibuka */
+/*
+input:invalid {
+  border-color: var(--color-danger);
+}
+*/
+
+/* BENAR — hanya setelah pengguna mengisi sesuatu yang tidak sah */
+input:user-invalid {
+  border-color: var(--color-danger);
+  border-width: 2px;
+}
+
+/* Gambar koleksi mobil */
+figure {
+  margin: var(--space-4) 0;
+  padding: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+figcaption {
+  padding: var(--space-2) var(--space-3);
+  font-weight: 600;
+  color: var(--color-fg);
+}
+
+.kartu {
+    display: flex;
+    flex-direction: column;
+
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-1);
+
+    padding: var(--card-pad);
+
+    min-width: 0;
+    min-height: 14rem;
+}
+
+/* Judul kartu */
+
+.kartu__judul {
+    overflow-wrap: anywhere;
+}
+
+
+/* ==============================
+   FIGURE DI DALAM GALERI
+   ============================== */
+
+.galeri figure {
+    margin: 0;
+}
+
+.galeri__placeholder {
+    display: grid;
+    place-items: center;
+    min-height: 12rem;
+    padding: var(--space-4);
+    color: var(--color-fg);
+    background: var(--color-bg);
+    text-align: center;
+}
+
+
+/* ==============================
+   PERBAIKAN ISI PANJANG
+   ============================== */
+
+.galeri img {
+    max-width: 100%;
+    height: auto;
+}
+
+.galeri figure img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mobil</title>
+
+    <link rel="stylesheet" href="../css/tokens.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/komponen.css">
+    <link rel="stylesheet" href="../css/tema.css">
+    <link rel="stylesheet" href="../css/responsif.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- BARIS PERTAMA -->
+        <header>
+            <div class="header-baris">
+
+                <h1 id="judul-profil">Profil Mobil</h1>
+
+                <nav class="navbar" aria-label="Navigasi utama">
+                    <ul>
+                        <li>
+                            <a href="#koleksi-mobil">Koleksi Mobil</a>
+                        </li>
+                        <li>
+                            <a href="#tambah-mobil">Tambah Mobil</a>
+                        </li>
+                        <li>
+                            <a href="#tentang-saya">Tentang Saya</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <input
+                type="checkbox"
+                id="tema"
+                class="pengalih-tema"
+            >
+
+            <label for="tema" class="tombol-tema">
+                Aktifkan tema gelap
+            </label>
+
+            <p id="deskripsi-profil"></p>
+        </header>
+
+
+        <!-- BARIS KEDUA -->
+        <div class="isi">
+
+            <!-- SIDEBAR -->
+            <aside class="sisi">
+
+                <h2>Menu</h2>
+
+                <nav aria-label="Menu samping">
+                    <ul>
+                        <li>
+                            <a href="#koleksi-mobil">
+                                Koleksi Mobil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#tambah-mobil">
+                                Tambah Mobil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#tentang-saya">
+                                Tentang Saya
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </aside>
+
+
+            <!-- KONTEN UTAMA -->
+            <main class="utama">
+
+                <section id="koleksi-mobil">
+
+                    <h2>Koleksi Mobil</h2>
+
+                    <p>
+                        Berikut adalah beberapa mobil yang menjadi
+                        koleksi saya.
+                    </p>
+
+                    <div class="katalog">
+
+
+                    </div>
+
+                    <div id="galeri-mobil" class="galeri"></div>
+
+                </section>
+
+
+                <section id="tambah-mobil">
+
+                    <h2>Tambah Mobil</h2>
+
+                    <p>
+                        Masukkan informasi mobil yang ingin
+                        ditambahkan ke koleksi.
+                    </p>
+
+                    <form id="form-tambah-mobil" class="form-kolom">
+
+                        <p>
+                            <label for="nama-mobil">
+                                Nama Mobil
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nama-mobil"
+                                name="nama-mobil"
+                                maxlength="80"
+                                required
+                            >
+                        </p>
+
+
+                        <p>
+                            <label for="merek">
+                                Merek Mobil
+                            </label>
+
+                            <input
+                                type="text"
+                                id="merek"
+                                name="merek"
+                                maxlength="60"
+                                required
+                            >
+                        </p>
+
+
+                        <p>
+                            <label for="tahun">
+                                Tahun Mobil
+                            </label>
+
+                            <input
+                                type="number"
+                                id="tahun"
+                                name="tahun"
+                                min="1950"
+                                step="1"
+                                required
+                            >
+                        </p>
+
+
+                        <p>
+                            <label for="jenis">
+                                Jenis Mobil
+                            </label>
+
+                            <input
+                                type="text"
+                                id="jenis"
+                                name="jenis"
+                                maxlength="60"
+                                required
+                            >
+                        </p>
+
+
+                        <button type="submit">
+                            Simpan Mobil
+                        </button>
+
+                        <p id="status-form" class="pesan-status" aria-live="polite"></p>
+
+                    </form>
+
+                </section>
+
+
+                <section id="tentang-saya">
+
+                    <h2>Tentang Saya</h2>
+
+                    <p id="tentang-teks"></p>
+
+                </section>
+
+            </main>
+
+        </div>
+
+
+        <!-- BARIS KETIGA -->
+        <footer>
+
+            <p id="identitas-footer"></p>
+
+        </footer>
+
+    </div>
+
+    <script type="module" src="../js/app.js"></script>
+</body>
+</html>

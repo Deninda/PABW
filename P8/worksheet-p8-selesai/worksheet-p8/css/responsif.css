@@ -1,0 +1,50 @@
+/* Dasar: layout satu kolom untuk layar sempit dan semua ukuran layar */
+.isi {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "sisi"
+        "utama";
+    gap: var(--space-4);
+}
+
+.katalog,
+.galeri {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+}
+
+/* Mencegah gambar, tabel, dan teks panjang meluber */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.isi > *,
+.katalog > *,
+.galeri > * {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Tablet: katalog dan galeri menjadi dua kolom */
+@media (min-width: 48rem) {
+    .katalog,
+    .galeri {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Desktop: sidebar berdampingan dengan konten, galeri tiga kolom */
+@media (min-width: 60rem) {
+    .isi {
+        grid-template-columns: 16rem minmax(0, 1fr);
+        grid-template-areas: "sisi utama";
+    }
+
+    .katalog,
+    .galeri {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
