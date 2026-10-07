@@ -39,6 +39,17 @@ Saya menggunakan AI sebagai bantuan dalam memahami struktur HTML5, membuat dan m
 
 Kriteria selesai saya: mengubah --color-primary di satu baris harus mengubah warna tombol, tautan, judul, dan garis fokus.
 
+## Pertemuan 5 — Layout Modern: Flexbox dan Grid
+
+Halaman koleksi mobil dari Pertemuan 4 disusun ulang menggunakan CSS Grid untuk kerangka halaman dan Flexbox untuk komponen satu arah. Berkas P5 berada di folder whorksheetP5/.
+
+- Kerangka halaman memakai tiga baris: header dan footer mengikuti isi, sedangkan area utama mengisi ruang yang tersisa (auto 1fr auto).
+- Area isi memakai dua kolom (16rem 1fr) dengan area bernama sisi dan utama.
+- Header, navigasi, daftar menu, footer, dan isi kartu menggunakan Flexbox dengan gap.
+- Katalog kartu memakai Grid adaptif repeat(auto-fit, minmax(16rem, 1fr)); kartu pertama membentang dua kolom.
+- Ukuran minimum kartu dan min-width: 0 membantu menjaga isi agar tidak meluber.
+- Sketsa kerangka: header → sidebar (16rem) + konten (1fr) → footer.
+
 ## Pertemuan 6 — Responsif Mobile-First
 
 Halaman koleksi mobil dari pertemuan sebelumnya disesuaikan agar nyaman digunakan di layar ponsel, tablet, dan desktop.
