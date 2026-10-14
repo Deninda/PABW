@@ -80,3 +80,16 @@ AI digunakan untuk menganalisis kode, menjelaskan temuan, dan membantu memperbai
 ## Riwayat Commit Git
 
 Riwayat perubahan proyek dapat dilihat dengan perintah `git log --oneline`.
+
+# Profil Koleksi Mobil - PABW Pertemuan 9
+
+Halaman profil sederhana yang menampilkan koleksi mobil, filter kategori, form tambah mobil, penyimpanan lokal, dan pilihan tema.
+
+## Menjalankan
+
+Buka `html/profile.html` melalui server lokal agar modul JavaScript dapat dimuat dengan benar.
+
+## Deklarasi bantuan AI
+
+AI digunakan untuk meninjau kesesuaian implementasi dengan Worksheet P9, menambahkan status aksesibel pada tombol filter, dan menyusun README ini. Data profil, topik, dan implementasi awal halaman berasal dari pekerjaan pemilik proyek.
+
