@@ -1,0 +1,32 @@
+[
+  {
+    "nama": "Lancer Evo 9",
+    "merek": "Mitsubishi",
+    "tahun": 2005,
+    "jenis": "Sedan Sport",
+    "kategori": "Sedan Sport",
+    "gambar": "../assets/mobil1.webp",
+    "alt": "Mitsubishi Lancer Evo 9 dalam koleksi",
+    "favorit": true
+  },
+  {
+    "nama": "BMW M3 GTR",
+    "merek": "BMW",
+    "tahun": 2000,
+    "jenis": "Sport",
+    "kategori": "Sport",
+    "gambar": "../assets/mobil2.webp",
+    "alt": "BMW M3 GTR dalam koleksi",
+    "favorit": false
+  },
+  {
+    "nama": "GTR R34",
+    "merek": "Nissan",
+    "tahun": 2002,
+    "jenis": "Sport",
+    "kategori": "Sport",
+    "gambar": "../assets/mobil3.webp",
+    "alt": "Nissan GTR R34 dalam koleksi",
+    "favorit": false
+  }
+]
